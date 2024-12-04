@@ -20,7 +20,7 @@ def register(request):
             return JsonResponse({"error": "Username and password are required"}, status=400)
 
         try:
-            user = UserModel.objects.create_user(username=username, password=password)  # Using custom manager
+            user = UserModel.objects.create(username=username, password=password)  # Using custom manager
             return JsonResponse({"message": "User registered successfully", "user_id": user.id})
         except IntegrityError:
             return JsonResponse({"error": "Username already exists"}, status=400)
