@@ -3,6 +3,10 @@
 
 This project provides an API for user registration, login, and file upload functionality to convert CSV files to XLSX format. It uses Django as the backend framework and provides a simple interface for users to upload CSV files, which are then converted into Excel files.
 
+## Demo Vedio
+   
+https://youtu.be/E-MAS5bG7RY
+
 ## Features
 
 - **User Registration**: Users can create an account by providing a unique username and password.
@@ -67,9 +71,6 @@ This project provides an API for user registration, login, and file upload funct
 - **Data**:
   - `username`: The username for the new user.
   - `password`: The password for the new user.
-- **Response**:
-  - Success: `{ "message": "User registered successfully", "user_id": <user_id> }`
-  - Error: `{ "error": "Username and password are required" }` or `{ "error": "Username already exists" }`
 
 ### 2. **User Login**
 - **URL**: `/login`
@@ -77,18 +78,12 @@ This project provides an API for user registration, login, and file upload funct
 - **Data**:
   - `username`: The username of the user.
   - `password`: The password of the user.
-- **Response**:
-  - Success: `{ "message": "Login successful" }`
-  - Error: `{ "error": "Invalid credentials" }` or `{ "error": "User does not exist" }`
 
 ### 3. **File Upload and Conversion**
 - **URL**: `/upload`
 - **Method**: `POST`
 - **Data**:
   - `file`: A CSV file to be uploaded and converted to XLSX.
-- **Response**:
-  - Success: A file download response with the converted XLSX file.
-  - Error: `{ "error": "No file provided." }`, `{ "error": "Only CSV files are allowed." }`, or `{ "error": "File processing error: <error_message>" }`
 
 ## Folder Structure
 
